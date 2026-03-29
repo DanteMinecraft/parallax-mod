@@ -37,7 +37,7 @@ import net.minecraftforge.event.RegisterCommandsEvent;
 public class Parallax {
     // Define mod id in a common place for everything to reference
     public static final String MODID = "parallax";
-    // Directly reference a slf4j logger
+    // Directly reference a slf4j logger test
     private static final Logger LOGGER = LogUtils.getLogger();
     // Create a Deferred Register to hold Blocks which will all be registered under the "parallax" namespace
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MODID);
