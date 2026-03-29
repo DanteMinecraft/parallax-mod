@@ -1,8 +1,13 @@
 package net.dantemc.parallax;
 
 import com.mojang.logging.LogUtils;
+import net.dantemc.parallax.commands.ParallaxLocate;
+import net.dantemc.parallax.commands.ParallaxTemperatureCheck;
+import net.dantemc.parallax.commands.ParallaxTravel;
 import net.minecraft.client.Minecraft;
-import net.minecraft.world.level.Level;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -31,6 +36,14 @@ public class Parallax {
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
+
+        ParallaxPlanetManager.setTemperature(ResourceKey.create(
+                Registries.DIMENSION, new ResourceLocation("parallax", "kepler")), 20f
+        );
+
+        ParallaxPlanetManager.setTemperature(ResourceKey.create(
+                Registries.DIMENSION, new ResourceLocation("parallax", "europa")), 300f
+        );
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);

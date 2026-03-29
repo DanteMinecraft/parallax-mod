@@ -1,6 +1,7 @@
-package net.dantemc.parallax;
+package net.dantemc.parallax.commands;
 
 import com.mojang.brigadier.CommandDispatcher;
+import net.dantemc.parallax.ParallaxTemperatureBridge;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
 import net.minecraft.network.chat.Component;
