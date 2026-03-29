@@ -8,10 +8,18 @@ import net.minecraft.world.level.Level;
 public class ParallaxTemperatureBridge {
 
     public static float getTemperatureCelsius(Level level, Vec3 pos) {
-        return NorthstarTemperature.getTemperatureAt(level, pos);
+
+        Float planetTemp = ParallaxPlanetManager.getTemperature(level);
+
+        if (planetTemp != null) {
+            return planetTemp; //Parallax temperature
+        } else {
+            return NorthstarTemperature.getTemperatureAt(level, pos); //Northstar fallback temperature
+        }
     }
 
-    public static float getTemperatureKelvin(Level level, Vec3 pos) {
-        return getTemperatureCelsius(level, pos) + 273.15f;
+    // Display in UI:s
+    public static float toKelvin(float celsius) {
+        return celsius + 273.15f;
     }
 }

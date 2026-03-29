@@ -27,7 +27,7 @@ public class ParallaxTemperatureCheck {
                                     Vec3 pos = player.position();
 
                                     float celsius = ParallaxTemperatureBridge.getTemperatureCelsius(level, pos);
-                                    float kelvin = ParallaxTemperatureBridge.getTemperatureKelvin(level, pos);
+                                    float kelvin = ParallaxTemperatureBridge.toKelvin(celsius);
 
                                     source.sendSuccess(() ->
                                                     Component.literal("Northstar: " + celsius + " °C\n" + "Parallax: " + kelvin + " K"),
