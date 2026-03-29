@@ -1,25 +1,53 @@
-# eclipse
-bin
-*.launch
-.settings
-.metadata
-.classpath
-.project
+# =========================
+# Gradle
+# =========================
+/.gradle/
+/build/
+/out/
 
-# idea
-out
+# =========================
+# IntelliJ
+# =========================
+.idea/
+*.iml
 *.ipr
 *.iws
-*.iml
-.idea
 
-# gradle
-build
-.gradle
+# =========================
+# Eclipse (om du någonsin använder det)
+# =========================
+/bin/
+/.settings/
+/.metadata/
+.classpath
+.project
+*.launch
 
-# other
-eclipse
-run
+# =========================
+# Forge / Minecraft
+# =========================
+/run/
+/logs/
+/crash-reports/
 
-# Files from Forge MDK
-forge*changelog.txt
+# =========================
+# OS / skräp
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Logs
+# =========================
+*.log
+
+# =========================
+# Temporary / cache
+# =========================
+*.tmp
+*.cache
+
+# =========================
+# Env files
+# =========================
+*.env
